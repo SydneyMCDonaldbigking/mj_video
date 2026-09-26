@@ -1,0 +1,43 @@
+{
+  "project_id": "japan-food-01",
+  "destination": "Japan",
+  "audience": "想去日本吃一顿好的年轻旅行者",
+  "season": "late autumn",
+  "time_of_day": "warm evening interior light",
+  "orientation": "portrait",
+  "keyframe_resolution": "1080p",
+  "style": "premium Japanese food commercial, photorealistic, appetising natural colour, restrained MJ-inspired soft cinematic light, shallow depth of field",
+  "audio_mode": "inherit",
+  "clips": [
+    {
+      "clip_id": "clip-01-kaiseki",
+      "input_strategy": "auto_keyframe",
+      "place": "Kyoto kaiseki ryotei, private tatami room",
+      "reference": null,
+      "keyframe_prompt": "An elegant kaiseki course on a black lacquer tray: a few small seasonal dishes in hand-made ceramic and lacquer bowls, one lidded clear-soup bowl with its lid resting beside it, a single autumn maple leaf as garnish, soft garden light through shoji paper, low three-quarter view, generous negative space, no people",
+      "motion_prompt": "Slow 5 cm push-in toward the open soup bowl, then the camera holds still for the final second.\n\nA thin, soft wisp of steam rises from the clear soup and drifts gently to one side. Soft garden light glows on the lacquer.\n\nSound: a quiet tatami room, faint wind outside, one soft wooden knock.",
+      "duration_seconds": 5,
+      "seed": 26092611
+    },
+    {
+      "clip_id": "clip-02-sushi",
+      "input_strategy": "auto_keyframe",
+      "place": "Tokyo omakase sushi counter",
+      "reference": null,
+      "keyframe_prompt": "Close view across a pale hinoki wood sushi counter: a sushi chef's hands, seen from the wrists only, placing one glossy piece of otoro nigiri onto a dark stone plate that already holds two nigiri, a small mound of pickled ginger, warm overhead counter light, shallow depth of field, no faces",
+      "motion_prompt": "Locked-off camera, no movement.\n\nThe chef's hands set the nigiri in hand down on the plate in one calm motion, then withdraw smoothly out of the top of frame. The nigiri already on the plate are food resting on the stone, like the ginger beside them.\n\nSound: a hushed sushi counter, the soft touch of rice on stone.",
+      "duration_seconds": 5,
+      "seed": 26092612
+    },
+    {
+      "clip_id": "clip-03-wagyu",
+      "input_strategy": "auto_keyframe",
+      "place": "Wagyu yakiniku over binchotan charcoal",
+      "reference": null,
+      "keyframe_prompt": "Tight close-up of three thick slices of A5 wagyu mid-sear on a straight-bar yakiniku grill grate over glowing binchotan charcoal in a clay shichirin. The undersides are seared deep golden-brown with crisp caramelised edges, the tops show fine white marbling like delicate lace through rosy pink meat, rendered fat glistening, faint smoke catching warm light, dark moody background, shallow depth of field, no people",
+      "motion_prompt": "Slow 4 cm push-in toward the nearest wagyu slice, then the camera holds still for the final second.\n\nA light ribbon of smoke rises from behind the meat and curls slowly through the warm light. The binchotan glows steadily below the grate. The wagyu slices are food resting on the grate, like the charcoal beneath them.\n\nSound: a steady low sizzle over charcoal, a soft crackle.",
+      "duration_seconds": 5,
+      "seed": 26092653
+    }
+  ]
+}

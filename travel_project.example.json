@@ -1,0 +1,43 @@
+{
+  "project_id": "sydney-spring-01",
+  "destination": "Sydney, Australia",
+  "audience": "首次到访的年轻旅行者",
+  "season": "spring",
+  "time_of_day": "golden hour into blue hour",
+  "orientation": "portrait",
+  "keyframe_resolution": "1080p",
+  "style": "premium editorial travel film, photorealistic, natural colour, restrained MJ-inspired soft light",
+  "audio_mode": "inherit",
+  "clips": [
+    {
+      "clip_id": "clip-01-arrival",
+      "input_strategy": "auto_keyframe",
+      "place": "Sydney Harbour arrival",
+      "reference": null,
+      "keyframe_prompt": "A waterside arrival view with the Opera House and harbour geometry clearly separated, no tourist-poster text, foreground ferry rail giving depth, realistic spring weather",
+      "motion_prompt": "Locked medium-wide view from a ferry deck. The camera makes one slow 6 cm push-in toward the harbour. Water carries small natural ripples and one distant ferry moves steadily across the background; the skyline and Opera House remain perfectly rigid. The move stops for the final second.",
+      "duration_seconds": 5,
+      "seed": 26092601
+    },
+    {
+      "clip_id": "clip-02-experience",
+      "input_strategy": "auto_keyframe",
+      "place": "The Rocks laneway café experience",
+      "reference": null,
+      "keyframe_prompt": "Human-height view along a sandstone laneway with a small outdoor café, one fictional traveller seen from behind, understated wardrobe, warm side light, uncluttered foreground",
+      "motion_prompt": "Human-height medium-wide shot following the fictional traveller from behind for two slow steps through the sandstone lane. The camera advances smoothly by about 10 cm while a café awning stirs slightly in the breeze. Faces, masonry, tables and shopfront geometry stay stable. The traveller pauses and the frame settles for the final second.",
+      "duration_seconds": 5,
+      "seed": 26092602
+    },
+    {
+      "clip_id": "clip-03-close",
+      "input_strategy": "auto_keyframe",
+      "place": "Mrs Macquarie's Point at blue hour",
+      "reference": null,
+      "keyframe_prompt": "Quiet blue-hour lookout across the harbour, layered eucalyptus foreground, city lights just beginning, reflective water, contemplative closing composition without readable signs",
+      "motion_prompt": "Locked wide closing shot. Only the nearest eucalyptus leaves move gently in a light breeze and the harbour surface shimmers with restrained reflections. The camera performs one very gentle 8 cm pull-back, revealing a little more foreground, then holds completely still for the final second.",
+      "duration_seconds": 5,
+      "seed": 26092603
+    }
+  ]
+}

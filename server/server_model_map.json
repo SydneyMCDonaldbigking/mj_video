@@ -1,0 +1,12 @@
+{
+  "unet": "krea2_turbo_fp8_scaled.safetensors",
+  "clip": "qwen3vl_4b_fp8_scaled.safetensors",
+  "vae": "qwen_image_vae.safetensors",
+  "loras": [
+    ["krea2_mj/krea2小志_xm_k20_texture.safetensors", 0.6],
+    ["krea2_mj/krea2-Cc-MJ-风格滤镜.safetensors", 0.7],
+    ["krea2_mj/K2-MJ美学增强Afterlight_v1.safetensors", 0.5],
+    ["krea2_mj/krea2-Cc-MJ-影视柔光.safetensors", 0.6]
+  ],
+  "rebalance": {"multiplier": 0.58}
+}
