@@ -4,3 +4,4 @@ runs/
 *.partial
 *.safetensors
 *.mp4
+deliveries/
