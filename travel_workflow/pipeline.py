@@ -227,7 +227,11 @@ class TravelRun:
     def _save_manifest(self, manifest: dict[str, Any]) -> None:
         _atomic_json(self.manifest_path, manifest)
 
-    def generate_keyframes(self, provider: KeyframeProvider | None, *, force: bool = False) -> dict[str, Any]:
+    def generate_keyframes(self, provider: KeyframeProvider | None, *, force: bool = False,
+                           reroll: tuple[str, ...] = ()) -> dict[str, Any]:
+        unknown = set(reroll).difference(clip.clip_id for clip in self.project.clips)
+        if unknown:
+            raise ValueError("--reroll-clip 指定了不存在的片段: " + ", ".join(sorted(unknown)))
         manifest = self._load_manifest()
         clips_state = manifest.setdefault("clips", {})
         raw_dir = self.run_dir / "keyframes" / "raw"
@@ -235,7 +239,8 @@ class TravelRun:
         for clip in self.project.clips:
             state = clips_state.get(clip.clip_id, {})
             normalized_path = normalized_dir / f"{clip.clip_id}.png"
-            if (not force and state.get("keyframe_status") in {"pending_review", "approved"}
+            if (not force and clip.clip_id not in reroll
+                    and state.get("keyframe_status") in {"pending_review", "approved"}
                     and normalized_path.is_file()):
                 if _sha256(normalized_path) != state.get("reference_sha256"):
                     raise ValueError(

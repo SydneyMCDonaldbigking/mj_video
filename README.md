@@ -40,6 +40,8 @@ python scripts/cc_travel_submit.py `
   --comfy-url http://127.0.0.1:8188
 ```
 
+某一张不满意时，改该片段的 `keyframe_prompt`（或 seed）后只重抽它：`--stage keyframes --reroll-clip <clip_id>`；`--force` 则整组重抽。
+
 在 `runs/<project_id>/keyframes/approved_inputs/` 查看三张图。确认无错误地标、乱码招牌、建筑变形、人物漂移风险后，再显式批准并提交 H3：
 
 ```powershell

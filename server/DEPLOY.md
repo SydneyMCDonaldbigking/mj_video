@@ -74,6 +74,21 @@ $P scripts/cc_travel_submit.py --project japan_food_project.json --stage h3 --ap
 $P scripts/cc_travel_submit.py --project japan_food_project.json --stage report --h3-repo /opt/h3
 ```
 
+单张关键帧不满意时只重抽那一张：`--stage keyframes --reroll-clip clip-02-yokocho`
+（`--force` 会把整个项目全部重抽）。
+
+## 冷机部署（2026-10-01，4090 24GB 空机，约 35 分钟）
+
+H3 工程按 `MINIMAXH3_2PASS_Autoworkflow/docs/DEPLOY_CLOUD_5090.md`「第二台实测」一节部署，差异：
+
+- `/model/.../MiniMax-H3/` 仍然**没有 `loras/`**，4-step LoRA 从魔搭拉（6 MB/s，5 分钟）。
+- CUDA 12.8 apt 装 3.7 GB；bootstrap 副本在 nvcc 检查前加了等待循环，两者并行省约 15 分钟。
+- GitHub 直连随机 TLS 断：ComfyUI 先用 `git clone --depth 1 --branch v0.34.0` 走
+  `https://gh-proxy.com/https://github.com/...` 手动克隆好，KJNodes 同理，bootstrap 见到 `.git` 会跳过克隆。
+  `--filter=blob:none` 走代理会按需拉 blob，极慢且容易 checkout 失败，不要用。ghfast.top 这次直接挂起。
+- 4 个 MJ LoRA 只能从本地上传（约 400 KB/s，785 MB 用了约 25 分钟），**最先开始传**。
+- 这类平台的 SSH 端口转发会随机断连接，命令都要带重试；长任务一律 `setsid --fork` 放服务器上跑。
+
 ## 实测
 
 | 项目 | 数值 |

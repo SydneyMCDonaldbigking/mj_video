@@ -139,6 +139,25 @@ class TravelWorkflowTests(unittest.TestCase):
             run.generate_keyframes(provider)
             self.assertEqual(provider.calls, 1)
 
+    def test_reroll_regenerates_only_the_named_clip(self):
+        with tempfile.TemporaryDirectory() as folder:
+            temp = Path(folder)
+            payload = json.loads((ROOT / "travel_project.example.json").read_text(encoding="utf-8"))
+            payload["clips"] = payload["clips"][:2]
+            project_file = temp / "project.json"
+            project_file.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            run = TravelRun(load_project(project_file), temp / "runs")
+            provider = TimedProvider()
+            run.generate_keyframes(provider)
+            target = payload["clips"][1]["clip_id"]
+            run.generate_keyframes(provider, reroll=(target,))
+            self.assertEqual(provider.calls, 3)
+            state = json.loads(run.manifest_path.read_text(encoding="utf-8"))["clips"]
+            self.assertEqual(len(state[target]["keyframe_history"]), 1)
+            self.assertEqual(state[payload["clips"][0]["clip_id"]]["keyframe_history"], [])
+            with self.assertRaises(ValueError):
+                run.generate_keyframes(provider, reroll=("no-such-clip",))
+
     def test_pending_keyframe_is_also_idempotent_without_force(self):
         with tempfile.TemporaryDirectory() as folder:
             temp = Path(folder)

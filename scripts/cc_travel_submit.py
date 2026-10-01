@@ -42,6 +42,8 @@ def main() -> int:
     parser.add_argument("--approve-keyframes", action="store_true",
                         help="明确批准当前 manifest 中全部待审关键帧后再提交 H3")
     parser.add_argument("--force", action="store_true", help="重新生成已存在的关键帧")
+    parser.add_argument("--reroll-clip", action="append", default=[], metavar="CLIP_ID",
+                        help="keyframes 阶段：只重抽指定片段的关键帧（可重复），旧计时并入历史")
     parser.add_argument("--rerun-clip", action="append", default=[], metavar="CLIP_ID",
                         help="h3 阶段：用当前 motion_prompt 重跑指定片段（可重复），旧成片留档并计入成本")
     args = parser.parse_args()
@@ -61,7 +63,8 @@ def main() -> int:
                 args.comfy_url, args.krea_workflow,
                 timeout=args.comfy_timeout, poll_seconds=args.comfy_poll,
                 model_map=model_map)
-        result = run.generate_keyframes(provider, force=args.force)
+        result = run.generate_keyframes(provider, force=args.force,
+                                         reroll=tuple(args.reroll_clip))
     elif args.stage == "approve":
         result = run.approve_keyframes()
     elif args.stage == "report":

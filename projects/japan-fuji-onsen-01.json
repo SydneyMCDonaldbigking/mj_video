@@ -1,0 +1,43 @@
+{
+  "project_id": "japan-fuji-onsen-01",
+  "destination": "Mount Fuji and Hakone area, Japan",
+  "audience": "想逃离城市、泡温泉看富士山的旅行者",
+  "season": "clear late autumn",
+  "time_of_day": "crisp dawn light into calm afternoon",
+  "orientation": "portrait",
+  "keyframe_resolution": "1080p",
+  "style": "serene premium travel film still, photorealistic, clean cool morning air, soft warm highlights, restrained MJ-inspired soft cinematic light, calm and spacious",
+  "audio_mode": "inherit",
+  "clips": [
+    {
+      "clip_id": "clip-01-fuji-lake",
+      "input_strategy": "auto_keyframe",
+      "place": "Mount Fuji over a still lake at dawn",
+      "reference": null,
+      "keyframe_prompt": "Snow-capped Mount Fuji at dawn rising above a still lake, its summit touched with soft pink sunlight, a near-perfect mirror reflection on the calm water, thin low mist lying on the lake surface, dark pine silhouettes on the shore in the foreground, no people, no boats",
+      "motion_prompt": "Slow 5 cm push-in toward the mountain, then the camera holds still for the final second.\n\nThin mist drifts slowly across the lake surface. The pink light on the summit warms gently. The mountain and its reflection stay steady.\n\nSound: a still dawn, faint water lapping, a single distant bird.",
+      "duration_seconds": 5,
+      "seed": 26100121
+    },
+    {
+      "clip_id": "clip-02-rotenburo",
+      "input_strategy": "auto_keyframe",
+      "place": "private open-air stone onsen bath facing the mountain",
+      "reference": null,
+      "keyframe_prompt": "A private open-air onsen bath of natural rough stone filled with clear hot water, soft steam rising, a wooden deck edge and a small wooden bucket on the stones, autumn maple leaves around the edge, and snow-capped Mount Fuji in the distance beyond the bath, calm late-morning light, no people",
+      "motion_prompt": "Locked-off camera, no movement.\n\nSoft white steam rises slowly from the hot water and drifts away to one side. Gentle ripples move across the bath surface. The stones and the mountain stay in place.\n\nSound: hot water trickling into the bath, a light breeze.",
+      "duration_seconds": 5,
+      "seed": 26100122
+    },
+    {
+      "clip_id": "clip-03-ryokan-tea",
+      "input_strategy": "auto_keyframe",
+      "place": "ryokan tatami room with green tea by the window",
+      "reference": null,
+      "keyframe_prompt": "Inside a quiet ryokan tatami room by a large window: a low wooden table with a ceramic teapot and a small handmade cup of bright green tea, a wagashi sweet on a small plate, shoji screens slid open to reveal Mount Fuji framed in the window, soft afternoon light across the tatami, no people",
+      "motion_prompt": "Locked-off camera, no movement.\n\nA thin wisp of steam rises from the cup of green tea and curls gently in the window light. Soft light glows on the tatami. The teapot, cup and sweet rest on the table.\n\nSound: a quiet room, a soft breeze through the window, distant birdsong.",
+      "duration_seconds": 5,
+      "seed": 26100123
+    }
+  ]
+}
