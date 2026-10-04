@@ -1,44 +1,80 @@
 {
-  "project_id": "japan-hokkaido-snow-01",
-  "generated_from": "reels/boards/japan-hokkaido-snow-01.json",
+  "id": "japan-hokkaido-snow-01",
+  "format": "mood",
   "destination": "Hokkaido, Japan",
+  "pin": "Hokkaido, Japan",
   "audience": "想去北海道看雪的年轻旅行者",
   "season": "deep winter, fresh powder snow",
   "time_of_day": "quiet snowy blue dusk and warm interior light",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "dreamy winter travel film still, photorealistic, soft blue snow light with warm amber accents, restrained MJ-inspired soft cinematic light, gentle grain",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#A9DBFF",
+  "accent_text": "#0A1A2B",
+  "source": "deliveries/japan-hokkaido-snow-01.mp4",
+  "hook": {
+    "lines": [
+      "Swap a 40°",
+      "Aussie Christmas",
+      "for {this}"
+    ],
+    "anchor": "lower"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-canal-dusk",
-      "input_strategy": "auto_keyframe",
       "place": "snowy stone warehouse canal lit by old gas lamps at dusk",
-      "reference": null,
+      "seed": 26100131,
       "keyframe_prompt": "A quiet Otaru-style canal at blue dusk in winter: old stone warehouses along the water with snow-covered roofs, a row of warm cast-iron gas lamps along the snowy walkway, the lamp light reflected in the dark still canal, soft snowflakes falling, no people, no boats, no readable signs",
       "motion_prompt": "Locked-off camera, no movement.\n\nSoft snowflakes fall slowly and steadily through the frame. The gas lamps glow warmly and their reflections ripple gently on the canal. The warehouses and lamps stay fixed in place.\n\nSound: a hushed snowy evening, faint water, soft wind.",
-      "duration_seconds": 5,
-      "seed": 26100131
+      "stickers": [
+        {
+          "type": "emoji",
+          "emoji": "❄️",
+          "pos": "tr"
+        }
+      ]
     },
     {
       "clip_id": "clip-02-lone-tree",
-      "input_strategy": "auto_keyframe",
       "place": "lone tree on rolling snow-covered hills",
-      "reference": null,
+      "seed": 26100132,
       "keyframe_prompt": "A single bare tree standing alone on smooth rolling hills completely covered in pristine untouched snow, soft wind-carved ripples on the snow surface, a pale blue sky with soft pastel light near the horizon, vast minimal composition with generous negative space, no people, no footprints",
       "motion_prompt": "Slow, smooth lateral drift to the left, then the camera holds still for the final second.\n\nA light veil of powder snow is lifted by the wind and drifts low across the hillside. The tree stands still on the hill.\n\nSound: soft wind over open snow.",
-      "duration_seconds": 5,
-      "seed": 26100132
+      "text": {
+        "lines": [
+          "Snow so cold",
+          "it squeaks"
+        ]
+      },
+      "anchor": "top"
     },
     {
       "clip_id": "clip-03-miso-ramen",
-      "input_strategy": "auto_keyframe",
       "place": "steaming miso ramen by a frosted window in a small ramen shop",
-      "reference": null,
+      "seed": 26100133,
       "keyframe_prompt": "A steaming bowl of Sapporo miso ramen on a worn wooden counter: rich golden broth, wavy yellow noodles, chashu slices, sweet corn, a pat of butter, bean sprouts and green onion, a pair of wooden chopsticks resting on the bowl, a frosted window behind with snow falling softly outside, warm interior light, close three-quarter view, shallow depth of field, no people",
       "motion_prompt": "Slow 4 cm push-in toward the bowl, then the camera holds still for the final second.\n\nSoft steam rises from the hot broth and curls gently upward. Snow falls softly outside the window. The noodles and toppings are food resting in the bowl.\n\nSound: a small warm ramen shop, a soft clink of a bowl, a faint winter wind outside.",
-      "duration_seconds": 5,
-      "seed": 26100133
+      "text": {
+        "lines": [
+          "Then warm up with",
+          "{Sapporo miso ramen} 🍜"
+        ]
+      },
+      "anchor": "upper"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{winter escape}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "Swap a 40° Christmas for powder snow and steaming miso ramen ❄️\nHokkaido’s snow season runs roughly December to March, right in the middle of the Aussie summer.\n\n📍 Hokkaido, Japan\n🔖 Save this for your winter escape\n\nVisuals created with AI.",
+  "hashtags": [
+    "#hokkaido",
+    "#hokkaidowinter",
+    "#japanwinter",
+    "#japantravel",
+    "#aussietravellers"
   ]
 }

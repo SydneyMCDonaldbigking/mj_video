@@ -1,44 +1,79 @@
 {
-  "project_id": "japan-okinawa-01",
-  "generated_from": "reels/boards/japan-okinawa-01.json",
+  "id": "japan-okinawa-01",
+  "format": "mood",
   "destination": "Okinawa, Japan",
+  "pin": "Okinawa, Japan",
   "audience": "想去冲绳海岛度假放空的旅行者",
   "season": "early summer, clear sunny weather",
   "time_of_day": "bright late morning into warm sunset",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "luminous tropical island travel film still, photorealistic, turquoise and emerald sea, bright clean light, restrained MJ-inspired soft cinematic light, fresh and airy",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#27D3C3",
+  "accent_text": "#04201E",
+  "source": "deliveries/japan-okinawa-01.mp4",
+  "hook": {
+    "lines": [
+      "Wait…",
+      "this is {Japan?}"
+    ],
+    "anchor": "top"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-turquoise-beach",
-      "input_strategy": "auto_keyframe",
       "place": "white sand beach with turquoise water",
-      "reference": null,
+      "seed": 26100211,
       "keyframe_prompt": "A pristine white sand beach on a quiet Okinawa island, crystal-clear shallow turquoise water fading to deep emerald and blue further out, small gentle waves with thin white foam lines on the shore, a green headland on one side, a few soft white clouds in a bright blue sky, high three-quarter view looking down the shoreline, no people, no boats",
       "motion_prompt": "Slow 5 cm push-in along the shoreline, then the camera holds still for the final second.\n\nSmall gentle waves roll in and spread thin white foam across the white sand, then slide back. Sunlight sparkles on the shallow water. The headland and clouds stay in place.\n\nSound: soft waves on the sand, a light sea breeze.",
-      "duration_seconds": 5,
-      "seed": 26100211
+      "stickers": [
+        {
+          "type": "emoji",
+          "emoji": "🏝️",
+          "pos": "tr"
+        }
+      ]
     },
     {
       "clip_id": "clip-02-shisa-roof",
-      "input_strategy": "auto_keyframe",
       "place": "shisa guardian lion on a red-tiled Okinawan roof",
-      "reference": null,
+      "seed": 26100212,
       "keyframe_prompt": "A traditional Okinawan house roof of curved red clay tiles joined with white plaster lines, a weathered clay shisa guardian lion statue sitting proudly on the roof ridge, bright pink bougainvillea flowers spilling over a stone wall below, deep blue sky with soft white clouds, bright tropical sunlight, low angle, no people",
       "motion_prompt": "Locked-off camera, no movement.\n\nSoft white clouds drift slowly across the blue sky behind the roof. The bougainvillea flowers sway gently in the sea breeze. The shisa statue and the roof tiles stay perfectly still.\n\nSound: a warm breeze, distant cicadas, faint sanshin music far away.",
-      "duration_seconds": 5,
-      "seed": 26100212
+      "text": {
+        "lines": [
+          "Red-tiled roofs",
+          "+ shisa guardians"
+        ]
+      },
+      "anchor": "lower"
     },
     {
       "clip_id": "clip-03-coral-sunset",
-      "input_strategy": "auto_keyframe",
       "place": "sunset over the ocean beside rugged coral rocks",
-      "reference": null,
+      "seed": 26100213,
       "keyframe_prompt": "Sunset over the East China Sea from a rocky Okinawa coast: dark rugged coral limestone rocks in the foreground with small tide pools reflecting the sky, calm ocean stretching to the horizon, the sun low and golden just above the horizon, the sky glowing orange, pink and violet, a soft golden path of light on the water, no people, no boats",
       "motion_prompt": "Locked-off camera, no movement.\n\nGentle waves roll softly against the coral rocks and wash over their edges in thin white foam. The golden path of light shimmers on the water. The sun glows steadily above the horizon.\n\nSound: waves on the rocks, a calm evening breeze.",
-      "duration_seconds": 5,
-      "seed": 26100213
+      "text": {
+        "lines": [
+          "Move over,",
+          "{Whitsundays} 🌅"
+        ]
+      },
+      "anchor": "top"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{island escape}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "Yes, this is Japan 🌊\nWhite sand, turquoise water and red-tiled roofs guarded by shisa lions. Okinawa is Japan’s tropical side.\n\n📍 Okinawa, Japan\n🔖 Save this for your island escape\n\nVisuals created with AI.",
+  "hashtags": [
+    "#okinawa",
+    "#okinawabeach",
+    "#japanbeach",
+    "#japantravel",
+    "#aussietravellers"
   ]
 }

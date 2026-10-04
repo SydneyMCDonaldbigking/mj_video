@@ -68,21 +68,38 @@ python scripts/cc_travel_submit.py `
 - 生视频：直接读 H3 每个任务 `report.json` 的 `elapsed_seconds` 和 `estimated_gpu_cost_cny`；失败任务没有耗时记录，不计入。
 - 另给出成片总秒数和每秒成片成本。单独建的 seed 试验项目不在本项目 manifest 里，不计入。
 
-## Instagram Reels 后期
+## 英文 Instagram Reels 流水线
 
-`scripts/reels_post.py` 把 3×5 秒成片剪成英文 Reels 版（1080×1920，约 13.75 秒），只剪辑包装，不重新生成画面：
+面向英文区（澳洲为主）的旅游 Reels，一条分镜板走到底：
 
-- 每段保留段内第 3–113 帧（约 4.6 秒），切点做推拉转场；
-- 第 1 段开场钩子 + 地点图钉，第 2、3 段各一句字幕，最后 2.1 秒压暗出收藏引导；
-- 不配旁白，保留 H3 原环境声（响度归一到 -18 LUFS），音乐在 Instagram 里用平台曲库加；
-- 文案在 `post/reels/<project_id>.json`：`{词}` 用主题色高亮，`anchor` 取 `top` / `upper` / `middle` / `lower` 避开画面主体；
-- 同时输出封面 `-cover.jpg` 和带话题标签的 `-caption.txt`，都在 `deliveries/reels/`（不入库）。
-
-```powershell
-python scripts/reels_post.py --all
+```text
+reels/boards/<id>.json（分镜板：镜头、提示词、文案、emoji、贴纸、IG 文案）
+  → scripts/reels_make.py：生成 projects/<id>.json，推到服务器
+  → 服务器 scripts/reels_remote.py：关键帧 → 下载总览图（人工审核，可 --auto 跳过）
+  → H3（失败自动重跑一次）→ 成本报告 → 下载单镜头片段
+  → scripts/reels_post.py：剪辑包装 → deliveries/reels/
 ```
 
-需要本机 ffmpeg、Pillow 和 Windows 自带的 Segoe UI 字体（`--fonts-dir` 可改）。
+```powershell
+python scripts/reels_make.py japan-hakone-01 --check     # 校验分镜板，打印预计 GPU 分钟和成本
+python scripts/reels_make.py japan-hakone-01             # 跑到关键帧审核，出 runs/<id>/keyframes_sheet.jpg
+python scripts/reels_make.py japan-hakone-01 --reroll clip-02-onsen   # 改了提示词后只重抽这张
+python scripts/reels_make.py japan-hakone-01 --approve   # H3 → 下载 → 后期
+python scripts/reels_make.py japan-hakone-01 --post-only # 只改了文案、位置、贴纸时重做后期（30 秒）
+```
+
+- 服务器地址在 `server/reels_server.json`。SSH 断线会自动重试；长任务在服务器后台跑，本地只在状态变化时打印一行。
+  服务器关机时退出码为 2。
+- 四种格式：`mood`（氛围）、`list`（编号清单）、`itinerary`（带时间贴纸的行程）、`asmr`（几乎无字，靠环境声）。
+  每种格式的镜头时长写在 `reels_post.py` 的 `FORMATS` 里。
+- 文字支持彩色 emoji（Windows 的 Segoe UI Emoji）。贴纸有地点、标签、时间、浮动 emoji、手绘箭头、sound on。
+- 文字位置在关键帧审核时定（总览图上画了 T/U/M/L 四条线）。自动建议只用来兜底，大块主体常判错。
+- 不配旁白，保留 H3 原环境声，响度归一到 -18 LUFS；音乐在 Instagram 里用平台曲库加。
+- 输出 `-reels.mp4`（1080×1920）、`-cover.jpg`、`-caption.txt` 和 `-qa.jpg`（每镜一帧的检查条），都在 `deliveries/reels/`，不入库。
+- 旧成片只有拼好的整片时，在分镜板里写 `"source"`，就能用 `--post-only` 重剪成别的格式，不花 GPU。
+
+导演规则（格式、节奏、提示词配方、文案和贴纸规范、澳洲选题日历）写在 Claude Code 技能
+`.claude/skills/reels-director/` 里。需要本机 ffmpeg、numpy、Pillow 和 Windows 自带字体（`--fonts-dir` 可改）。
 
 ## 输入策略
 

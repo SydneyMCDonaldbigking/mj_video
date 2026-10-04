@@ -62,6 +62,10 @@ cd /opt/h3 && PATH=$E:$PATH setsid nohup $E/python -m src.worker > /opt/h3/logs/
 生图和生视频共用一个 ComfyUI；提交 H3 前先 `POST /free`（`unload_models`、`free_memory`）
 把 Krea2 卸掉，64GB 内存不够两套模型同时驻留。
 
+Reels 流水线（`scripts/reels_make.py`）每次都会先跑 `scripts/reels_remote.py services`：
+两个进程没在跑就按上面的命令拉起来，所以服务器重启后不用手动启动。
+它也负责 `/free`，并且在 H3 队列没清空时不出关键帧。
+
 ## 5. 跑一个项目
 
 ```bash

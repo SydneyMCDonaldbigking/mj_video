@@ -1,44 +1,81 @@
 {
-  "project_id": "japan-kyoto-autumn-01",
-  "generated_from": "reels/boards/japan-kyoto-autumn-01.json",
+  "id": "japan-kyoto-autumn-01",
+  "format": "mood",
   "destination": "Kyoto, Japan",
+  "pin": "Kyoto, Japan",
   "audience": "想在红叶季去京都慢慢走的年轻旅行者",
   "season": "peak autumn foliage, mid November",
   "time_of_day": "soft early morning light turning to warm dusk",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "premium travel film still, photorealistic, rich crimson and amber maple colour, restrained MJ-inspired soft cinematic light, gentle haze, natural depth",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#E0393E",
+  "accent_text": "#FFFFFF",
+  "source": "deliveries/japan-kyoto-autumn-01.mp4",
+  "hook": {
+    "lines": [
+      "Book Kyoto for",
+      "{November.} 🍁"
+    ],
+    "anchor": "middle",
+    "sub": "Thank me later"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-temple-veranda",
-      "input_strategy": "auto_keyframe",
       "place": "wooden temple veranda on tall timber stilts above a maple valley",
-      "reference": null,
+      "seed": 26100101,
       "keyframe_prompt": "A grand old wooden temple hall with a wide timber veranda built on tall criss-crossed wooden stilts, perched on a hillside above a deep valley filled with blazing red and orange maple trees, soft morning mist in the valley, the city faint in the far distance, seen from across the valley, no people",
-      "motion_prompt": "Slow, smooth upward tilt from the maple valley to the temple veranda, then the camera holds still for the final second.\n\nThin morning mist drifts slowly through the valley below. The temple hall and its stilts stand solid in the soft light.\n\nSound: morning birdsong, a distant temple bell.",
-      "duration_seconds": 5,
-      "seed": 26100101
+      "motion_prompt": "Slow, smooth upward tilt from the maple valley to the temple veranda, then the camera holds still for the final second.\n\nThin morning mist drifts slowly through the valley below. The temple hall and its stilts stand solid in the soft light.\n\nSound: morning birdsong, a distant temple bell."
     },
     {
       "clip_id": "clip-02-moss-garden",
-      "input_strategy": "auto_keyframe",
       "place": "quiet moss garden with a small stone lantern and pond",
-      "reference": null,
+      "seed": 26100102,
       "keyframe_prompt": "A quiet Kyoto temple moss garden: soft green moss carpet, an old weathered stone lantern beside a still small pond, a scattering of bright red maple leaves on the moss and floating on the dark water, a red maple branch hanging into the top of frame, dappled light, low eye-level view, no people",
       "motion_prompt": "Locked-off camera, no movement.\n\nA few red maple leaves fall slowly from the branch above and settle on the pond, sending out small soft ripples. Dappled light shifts gently on the moss.\n\nSound: a hushed garden, a faint trickle of water.",
-      "duration_seconds": 5,
-      "seed": 26100102
+      "text": {
+        "lines": [
+          "Temple gardens,",
+          "maple leaves,",
+          "total silence"
+        ]
+      },
+      "anchor": "lower",
+      "stickers": [
+        {
+          "type": "emoji",
+          "emoji": "🍂",
+          "pos": "tr"
+        }
+      ]
     },
     {
       "clip_id": "clip-03-gion-lane",
-      "input_strategy": "auto_keyframe",
       "place": "lantern-lit stone lane between old wooden machiya at dusk",
-      "reference": null,
+      "seed": 26100103,
       "keyframe_prompt": "A narrow Kyoto stone-paved lane at blue-hour dusk, lined with dark wooden machiya townhouses with lattice fronts, warm paper lanterns glowing by the doorways, the stones slightly wet and reflecting the lantern light, a single maple tree with red leaves at the end of the lane, centred one-point perspective, no people, no readable writing on the lanterns",
       "motion_prompt": "Slow, steady 5 cm dolly forward along the lane, then the camera holds still for the final second.\n\nThe lanterns glow warmly and their reflections shimmer softly on the wet stones. The townhouses and lanterns hold their shape and place.\n\nSound: a quiet evening lane, distant wooden geta footsteps, soft wind.",
-      "duration_seconds": 5,
-      "seed": 26100103
+      "text": {
+        "lines": [
+          "Then old Kyoto",
+          "lights up at dusk 🏮"
+        ]
+      },
+      "anchor": "lower"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{Kyoto trip}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "Mid-to-late November is peak autumn colour in Kyoto 🍁\nGo early for quiet temples, then wander the old lanes when the lanterns come on.\n\n📍 Kyoto, Japan\n🔖 Save this for your Kyoto trip\n\nVisuals created with AI.",
+  "hashtags": [
+    "#kyoto",
+    "#kyotoautumn",
+    "#japantravel",
+    "#japantrip",
+    "#aussietravellers"
   ]
 }

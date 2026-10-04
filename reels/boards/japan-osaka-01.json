@@ -1,44 +1,79 @@
 {
-  "project_id": "japan-osaka-01",
-  "generated_from": "reels/boards/japan-osaka-01.json",
+  "id": "japan-osaka-01",
+  "format": "mood",
   "destination": "Osaka, Japan",
+  "pin": "Osaka, Japan",
   "audience": "想去大阪吃喝玩乐、感受城市烟火气的年轻旅行者",
   "season": "mild late autumn",
   "time_of_day": "golden hour into lively neon night",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "vibrant premium travel film still, photorealistic, warm gold and saturated neon colour, restrained MJ-inspired soft cinematic light, energetic but clean",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#FFB21A",
+  "accent_text": "#1A1206",
+  "source": "deliveries/japan-osaka-01.mp4",
+  "hook": {
+    "lines": [
+      "They call Osaka",
+      "{Japan’s kitchen}"
+    ],
+    "anchor": "lower",
+    "sub": "Come hungry 🐙"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-castle-moat",
-      "input_strategy": "auto_keyframe",
       "place": "Osaka Castle above its stone walls and moat at golden hour",
-      "reference": null,
+      "seed": 26100201,
       "keyframe_prompt": "Osaka Castle at golden hour: the white and green-roofed main keep with gold ornaments rising above massive curved stone walls, a calm wide moat in the foreground reflecting the castle and warm sky, autumn trees in orange and yellow along the walls, low angle from across the moat, no people, no boats",
-      "motion_prompt": "Slow, smooth upward tilt from the moat to the castle keep, then the camera holds still for the final second.\n\nGentle ripples move across the moat and the castle reflection shimmers softly. The golden light glows on the castle roofs. The castle and stone walls stand solid.\n\nSound: a calm evening, distant city hum, a few birds.",
-      "duration_seconds": 5,
-      "seed": 26100201
+      "motion_prompt": "Slow, smooth upward tilt from the moat to the castle keep, then the camera holds still for the final second.\n\nGentle ripples move across the moat and the castle reflection shimmers softly. The golden light glows on the castle roofs. The castle and stone walls stand solid.\n\nSound: a calm evening, distant city hum, a few birds."
     },
     {
       "clip_id": "clip-02-takoyaki",
-      "input_strategy": "auto_keyframe",
       "place": "freshly made takoyaki at a street stall",
-      "reference": null,
+      "seed": 26100242,
       "keyframe_prompt": "Tight close-up of eight freshly made golden takoyaki balls in a small paper boat on a dark wooden counter, glossy brown sauce and thin zig-zag lines of mayonnaise, sprinkled green aonori, a generous pile of very thin pale katsuobushi bonito flakes on top, soft steam rising, the background completely melted into soft round warm amber and red bokeh circles, very shallow depth of field, no people, no banners, no signboards, no lettering",
       "motion_prompt": "Locked-off camera, no movement.\n\nThe thin bonito flakes on top gently sway and curl in the rising heat. Soft steam drifts up from the hot takoyaki. The takoyaki are food resting in the paper boat.\n\nSound: a busy street stall, a soft sizzle, friendly chatter in the background.",
-      "duration_seconds": 5,
-      "seed": 26100242
+      "text": {
+        "lines": [
+          "Takoyaki straight",
+          "off the grill"
+        ]
+      },
+      "anchor": "top",
+      "stickers": [
+        {
+          "type": "tag",
+          "text": "MUST TRY 🔥"
+        }
+      ]
     },
     {
       "clip_id": "clip-03-canal-neon",
-      "input_strategy": "auto_keyframe",
       "place": "Dotonbori canal at night with neon reflections",
-      "reference": null,
+      "seed": 26100243,
       "keyframe_prompt": "Looking down at the dark rippling water of the Dotonbori canal at night: the water surface fills most of the frame, covered in long wavy streaks and shimmering reflections of pink, gold, blue and red neon light like liquid colour, the edge of a stone embankment with a warm lamp on one side, the city above shown only as soft out-of-focus glowing colour shapes at the very top of frame, no people, no boats, no signboards, no lettering",
       "motion_prompt": "Locked-off camera, no movement.\n\nThe neon reflections ripple, stretch and shimmer slowly across the dark canal water. The warm lamp on the embankment glows steadily.\n\nSound: a lively city night, distant music and chatter, soft water lapping.",
-      "duration_seconds": 5,
-      "seed": 26100243
+      "text": {
+        "lines": [
+          "Dotonbori glows",
+          "all night long ✨"
+        ]
+      },
+      "anchor": "lower"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{Osaka trip}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "They don’t call Osaka Japan’s kitchen for nothing 🐙\nCastle at golden hour, takoyaki straight off the grill, then Dotonbori after dark. Come hungry.\n\n📍 Osaka, Japan\n🔖 Save this for your Osaka trip\n\nVisuals created with AI.",
+  "hashtags": [
+    "#osaka",
+    "#osakafood",
+    "#takoyaki",
+    "#japantravel",
+    "#aussietravellers"
   ]
 }

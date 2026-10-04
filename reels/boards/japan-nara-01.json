@@ -1,44 +1,80 @@
 {
-  "project_id": "japan-nara-01",
-  "generated_from": "reels/boards/japan-nara-01.json",
+  "id": "japan-nara-01",
+  "format": "mood",
   "destination": "Nara, Japan",
+  "pin": "Nara, Japan",
   "audience": "喜欢古都、寺庙和小鹿的慢旅行者",
   "season": "early autumn, first touches of colour",
   "time_of_day": "misty early morning with soft sunbeams",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "tranquil ancient-capital travel film still, photorealistic, soft green and amber tones, morning haze and gentle sunbeams, restrained MJ-inspired soft cinematic light",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#9BD06A",
+  "accent_text": "#0F1A08",
+  "source": "deliveries/japan-nara-01.mp4",
+  "hook": {
+    "lines": [
+      "In Nara,",
+      "the locals",
+      "are {deer} 🦌"
+    ],
+    "anchor": "top"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-deer-park",
-      "input_strategy": "auto_keyframe",
       "place": "a young deer in the park under early autumn trees",
-      "reference": null,
+      "seed": 26100221,
       "keyframe_prompt": "A single young sika deer with a soft spotted coat standing calmly on short grass in Nara Park, head slightly turned toward the camera, large old trees with early autumn leaves behind, soft morning mist and warm sunbeams slanting through the trees, eye-level view, shallow depth of field, no people",
       "motion_prompt": "Locked-off camera, no movement.\n\nThe deer slowly lowers its head to the grass, then lifts it again calmly and its ears twitch once. Soft sunbeams glow through the drifting morning mist. The trees stand still behind it.\n\nSound: a quiet park morning, birdsong, soft rustle of grass.",
-      "duration_seconds": 5,
-      "seed": 26100221
+      "stickers": [
+        {
+          "type": "tag",
+          "text": "EASY DAY TRIP 🚆",
+          "pos": "below"
+        }
+      ]
     },
     {
       "clip_id": "clip-02-great-hall",
-      "input_strategy": "auto_keyframe",
       "place": "the great wooden Buddha hall at morning",
-      "reference": null,
+      "seed": 26100222,
       "keyframe_prompt": "The enormous ancient wooden Great Buddha Hall of a Nara temple in the early morning, its vast dark timber facade and sweeping grey tiled roof with golden ridge ornaments, a wide stone path leading to it, a large bronze lantern in the foreground, soft morning mist and warm low sunlight, centred symmetrical view, no people",
       "motion_prompt": "Slow, steady 5 cm dolly forward along the stone path, then the camera holds still for the final second.\n\nThin morning mist drifts slowly across the courtyard. Warm sunlight glows on the roof. The great hall and the lantern stand solid and unchanged.\n\nSound: a deep distant temple bell, morning birds.",
-      "duration_seconds": 5,
-      "seed": 26100222
+      "text": {
+        "lines": [
+          "Ancient temples",
+          "in the morning mist"
+        ]
+      },
+      "anchor": "lower"
     },
     {
       "clip_id": "clip-03-lantern-path",
-      "input_strategy": "auto_keyframe",
       "place": "forest path lined with moss-covered stone lanterns",
-      "reference": null,
+      "seed": 26100223,
       "keyframe_prompt": "A quiet forest shrine path in Nara lined on both sides with rows of old moss-covered stone lanterns, tall cedar trees, soft green moss on the ground, golden sunbeams streaming through the forest haze, a hint of a vermilion shrine building far down the path, one-point perspective, no people, no lettering",
       "motion_prompt": "Locked-off camera, no movement.\n\nGolden sunbeams shift slowly through the drifting forest haze. A few small leaves float gently down through the light. The stone lanterns and cedar trees stand still.\n\nSound: a hushed forest, birdsong, a soft breeze in the cedars.",
-      "duration_seconds": 5,
-      "seed": 26100223
+      "text": {
+        "lines": [
+          "Moss, cedars",
+          "and stone lanterns"
+        ]
+      },
+      "anchor": "lower"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{Japan trip}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "Breakfast with the locals 🦌\nNara is an easy day trip from Kyoto or Osaka. Get there early, before the crowds, and the park feels like yours.\n\n📍 Nara, Japan\n🔖 Save this for your Japan trip\n\nVisuals created with AI.",
+  "hashtags": [
+    "#nara",
+    "#narapark",
+    "#japantravel",
+    "#japantrip",
+    "#aussietravellers"
   ]
 }

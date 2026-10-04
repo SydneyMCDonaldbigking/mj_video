@@ -1,44 +1,74 @@
 {
-  "project_id": "japan-tokyo-night-01",
-  "generated_from": "reels/boards/japan-tokyo-night-01.json",
+  "id": "japan-tokyo-itinerary-01",
+  "format": "itinerary",
   "destination": "Tokyo, Japan",
+  "pin": "Tokyo, Japan",
   "audience": "向往东京夜生活与城市感的年轻旅行者",
   "season": "early winter, light rain",
   "time_of_day": "blue hour into neon night",
-  "orientation": "portrait",
-  "keyframe_resolution": "1080p",
   "style": "cinematic urban night travel film still, photorealistic, deep blue and warm neon colour, wet reflective surfaces, restrained MJ-inspired soft cinematic light, anamorphic bokeh",
-  "audio_mode": "inherit",
-  "clips": [
+  "accent": "#FF2D87",
+  "accent_text": "#FFFFFF",
+  "source": "deliveries/japan-tokyo-night-01.mp4",
+  "hook": {
+    "lines": [
+      "One perfect night",
+      "in {Tokyo} 🌃"
+    ],
+    "anchor": "lower"
+  },
+  "shots": [
     {
       "clip_id": "clip-01-skyline",
-      "input_strategy": "auto_keyframe",
       "place": "Tokyo skyline with the red-and-white lattice tower at blue hour",
-      "reference": null,
+      "seed": 26100111,
       "keyframe_prompt": "Tokyo skyline at blue hour seen from a high rooftop: the red-and-white lattice communication tower lit warm orange in the middle distance, dense glittering office towers around it stretching to the horizon, a deep blue sky with a last band of pink at the horizon, clean wide view, no people",
       "motion_prompt": "Slow, smooth lateral drift to the right, then the camera holds still for the final second.\n\nCity lights twinkle softly across the skyline. A few small red warning lights blink slowly on the tower tops. The tower and buildings stand fixed in place.\n\nSound: a distant city hum, soft wind on the rooftop.",
-      "duration_seconds": 5,
-      "seed": 26100111
+      "label": "6:00 PM"
     },
     {
       "clip_id": "clip-02-yokocho",
-      "input_strategy": "auto_keyframe",
       "place": "narrow izakaya alley with red paper lanterns",
-      "reference": null,
+      "seed": 26100142,
       "keyframe_prompt": "Close view of a small charcoal yakitori grill on a weathered wooden counter in a Tokyo yokocho alley at night, a row of skewers glistening on the grill, warm white smoke and steam rising into the light, two plain red paper lanterns with smooth blank surfaces glowing just above, the rest of the alley behind melted into soft round red and amber bokeh with wet reflections, shallow depth of field, no people, no lettering, no signboards",
       "motion_prompt": "Locked-off camera, no movement.\n\nWarm white smoke rises from the grill and drifts slowly up through the lantern light. The charcoal glows steadily. The skewers are food resting on the grill. The lanterns glow steadily.\n\nSound: muffled chatter and laughter nearby, a soft sizzle from the grill.",
-      "duration_seconds": 5,
-      "seed": 26100142
+      "label": "8:30 PM",
+      "text": {
+        "lines": [
+          "Yakitori + a cold one 🍻"
+        ]
+      },
+      "anchor": "upper"
     },
     {
       "clip_id": "clip-03-taxi-rain",
-      "input_strategy": "auto_keyframe",
       "place": "rain on a taxi window with neon city bokeh",
-      "reference": null,
+      "seed": 26100113,
       "keyframe_prompt": "View from the back seat of a Tokyo taxi through a rain-covered side window at night: large clear raindrops and small rivulets on the glass in sharp focus, the city outside reduced to soft round bokeh of pink, blue and amber neon and traffic lights, the dark edge of the window frame on one side, no people, no readable signs",
       "motion_prompt": "Locked-off camera inside the car.\n\nRaindrops slowly run down the window glass in thin trails. The neon bokeh outside drifts gently sideways as the taxi moves. The window frame stays fixed in place.\n\nSound: rain on the roof, the soft hum of the taxi, a faint wiper rhythm.",
-      "duration_seconds": 5,
-      "seed": 26100113
+      "label": "11:00 PM",
+      "text": {
+        "lines": [
+          "Rainy taxi back",
+          "to the hotel 🌧️"
+        ]
+      },
+      "anchor": "lower"
     }
+  ],
+  "cta": {
+    "lines": [
+      "Save this for your",
+      "{Tokyo trip}"
+    ],
+    "sub": "Send it to who you’re going with"
+  },
+  "ig_caption": "One perfect night in Tokyo 🌃\n6pm: blue hour from a rooftop\n8:30pm: yakitori and a cold one in a back-alley bar\n11pm: rainy taxi back to the hotel\n\n📍 Tokyo, Japan\n🔖 Save this for your Tokyo trip\n\nVisuals created with AI.",
+  "hashtags": [
+    "#tokyo",
+    "#tokyonight",
+    "#japantravel",
+    "#japantrip",
+    "#aussietravellers"
   ]
 }

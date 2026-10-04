@@ -1,0 +1,6 @@
+{
+  "host": "root@cpod-1vxxknwtb13m.podtcp.compshare.cn",
+  "port": 23704,
+  "repo": "/opt/H3_MJ",
+  "python": "/usr/local/miniconda3/envs/h3director/bin/python"
+}
