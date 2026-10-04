@@ -1,0 +1,14 @@
+{
+  "source": "deliveries/japan-nara-01.mp4",
+  "pin": "Nara, Japan",
+  "accent": "#9BD06A",
+  "accent_text": "#0F1A08",
+  "hook": {"lines": ["In Nara,", "the locals", "are {deer}"], "anchor": "top"},
+  "captions": [
+    {"lines": ["Ancient temples", "in the morning mist"], "anchor": "lower"},
+    {"lines": ["Moss, cedars", "and stone lanterns"], "anchor": "lower"}
+  ],
+  "cta": {"lines": ["Save this for your", "{Japan trip}"], "sub": "Send it to who you’re going with"},
+  "ig_caption": "Breakfast with the locals 🦌\nNara is an easy day trip from Kyoto or Osaka. Get there early, before the crowds, and the park feels like yours.\n\n📍 Nara, Japan\n🔖 Save this for your Japan trip\n\nVisuals created with AI.",
+  "hashtags": ["#nara", "#narapark", "#japantravel", "#japantrip", "#aussietravellers"]
+}

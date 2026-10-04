@@ -68,6 +68,22 @@ python scripts/cc_travel_submit.py `
 - 生视频：直接读 H3 每个任务 `report.json` 的 `elapsed_seconds` 和 `estimated_gpu_cost_cny`；失败任务没有耗时记录，不计入。
 - 另给出成片总秒数和每秒成片成本。单独建的 seed 试验项目不在本项目 manifest 里，不计入。
 
+## Instagram Reels 后期
+
+`scripts/reels_post.py` 把 3×5 秒成片剪成英文 Reels 版（1080×1920，约 13.75 秒），只剪辑包装，不重新生成画面：
+
+- 每段保留段内第 3–113 帧（约 4.6 秒），切点做推拉转场；
+- 第 1 段开场钩子 + 地点图钉，第 2、3 段各一句字幕，最后 2.1 秒压暗出收藏引导；
+- 不配旁白，保留 H3 原环境声（响度归一到 -18 LUFS），音乐在 Instagram 里用平台曲库加；
+- 文案在 `post/reels/<project_id>.json`：`{词}` 用主题色高亮，`anchor` 取 `top` / `upper` / `middle` / `lower` 避开画面主体；
+- 同时输出封面 `-cover.jpg` 和带话题标签的 `-caption.txt`，都在 `deliveries/reels/`（不入库）。
+
+```powershell
+python scripts/reels_post.py --all
+```
+
+需要本机 ffmpeg、Pillow 和 Windows 自带的 Segoe UI 字体（`--fonts-dir` 可改）。
+
 ## 输入策略
 
 - `auto_keyframe`：调用 Krea2 生成关键帧，审核后走 H3 Ref2VA。

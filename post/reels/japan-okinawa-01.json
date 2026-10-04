@@ -1,0 +1,14 @@
+{
+  "source": "deliveries/japan-okinawa-01.mp4",
+  "pin": "Okinawa, Japan",
+  "accent": "#27D3C3",
+  "accent_text": "#04201E",
+  "hook": {"lines": ["Wait…", "this is {Japan?}"], "anchor": "top"},
+  "captions": [
+    {"lines": ["Red-tiled roofs", "+ shisa guardians"], "anchor": "lower"},
+    {"lines": ["Move over,", "{Whitsundays}"], "anchor": "top"}
+  ],
+  "cta": {"lines": ["Save this for your", "{island escape}"], "sub": "Send it to who you’re going with"},
+  "ig_caption": "Yes, this is Japan 🌊\nWhite sand, turquoise water and red-tiled roofs guarded by shisa lions. Okinawa is Japan’s tropical side.\n\n📍 Okinawa, Japan\n🔖 Save this for your island escape\n\nVisuals created with AI.",
+  "hashtags": ["#okinawa", "#okinawabeach", "#japanbeach", "#japantravel", "#aussietravellers"]
+}
