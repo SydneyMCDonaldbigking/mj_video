@@ -1,6 +1,7 @@
 {
   "id": "japan-osaka-01",
   "format": "mood",
+  "template": "neon",
   "destination": "Osaka, Japan",
   "pin": "Osaka, Japan",
   "audience": "想去大阪吃喝玩乐、感受城市烟火气的年轻旅行者",

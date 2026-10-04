@@ -1,6 +1,7 @@
 {
   "id": "japan-nara-01",
   "format": "mood",
+  "template": "boxed",
   "destination": "Nara, Japan",
   "pin": "Nara, Japan",
   "audience": "喜欢古都、寺庙和小鹿的慢旅行者",

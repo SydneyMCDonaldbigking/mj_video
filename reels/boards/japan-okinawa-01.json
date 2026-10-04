@@ -1,6 +1,7 @@
 {
   "id": "japan-okinawa-01",
   "format": "mood",
+  "template": "classic",
   "destination": "Okinawa, Japan",
   "pin": "Okinawa, Japan",
   "audience": "想去冲绳海岛度假放空的旅行者",

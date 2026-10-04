@@ -1,6 +1,7 @@
 {
   "id": "japan-hokkaido-snow-01",
   "format": "mood",
+  "template": "bold",
   "destination": "Hokkaido, Japan",
   "pin": "Hokkaido, Japan",
   "audience": "想去北海道看雪的年轻旅行者",

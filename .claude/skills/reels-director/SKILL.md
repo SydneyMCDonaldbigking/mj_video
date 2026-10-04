@@ -24,6 +24,8 @@ description: 英文区（澳洲为主）Instagram Reels 旅游短视频的导演
 
 批量：多个 id 写在一条命令里（`reels_make.py a b c`），关键帧全部出完再一起审。
 
+视觉模板（7 套）默认随机，第一次渲染时自动均衡抽取并写回分镜板，所以分镜板里不用写 `template`。只有题材明显不搭时才手动指定，见 [style-bible.md](references/style-bible.md)。
+
 同一批素材可以剪出不同格式：新建一个板子，带 `"source": "deliveries/<原片>.mp4"`，再跑 `--post-only`，不花 GPU。
 
 ## 省 token 的规矩

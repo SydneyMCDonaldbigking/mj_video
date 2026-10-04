@@ -1,6 +1,7 @@
 {
   "id": "japan-tokyo-itinerary-01",
   "format": "itinerary",
+  "template": "neon",
   "destination": "Tokyo, Japan",
   "pin": "Tokyo, Japan",
   "audience": "向往东京夜生活与城市感的年轻旅行者",

@@ -14,6 +14,8 @@
 |---|---|---|
 | `id` | ✓ | 跟文件名一致，如 `japan-hakone-01` |
 | `format` | ✓ | `mood` / `list` / `itinerary` / `asmr` |
+| `template` | | 视觉模板，见 style-bible.md。不写或写 `"random"` 时，第一次渲染会均衡随机抽一套并写回 |
+| `template_seed` | | 整数，换它能让随机抽到别的模板 |
 | `destination` | ✓ | 生图用，如 `"Hakone, Japan"` |
 | `pin` | ✓ | 地点贴纸上的字 |
 | `season`、`time_of_day` | ✓ | 生图用，写英文 |

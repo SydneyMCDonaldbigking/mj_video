@@ -85,5 +85,33 @@ class ReelsBoardTests(unittest.TestCase):
             reels_post.shot_sources(board)
 
 
+class ReelsTemplateTests(unittest.TestCase):
+    def test_random_pick_is_stable_and_neon_only_at_night(self):
+        day = _board(time_of_day="bright late morning")
+        self.assertEqual(reels_post.pick_template(day).name, reels_post.pick_template(dict(day)).name)
+        picks = {reels_post.pick_template(_board(id=f"day-{i}", time_of_day="sunny noon")).name for i in range(60)}
+        self.assertNotIn("neon", picks)
+        self.assertGreaterEqual(len(picks), 5)
+        nights = {reels_post.pick_template(_board(id=f"n-{i}", time_of_day="blue hour into neon night")).name
+                  for i in range(60)}
+        self.assertIn("neon", nights)
+        self.assertEqual(reels_post.pick_template(_board(template="retro")).name, "retro")
+        seeded = {reels_post.pick_template(_board(template_seed=s)).name for s in range(20)}
+        self.assertGreater(len(seeded), 1)
+
+    def test_every_template_renders_every_text_style(self):
+        fonts = reels_post.Fonts(Path("C:/Windows/Fonts"))
+        for tpl in reels_post.TEMPLATES.values():
+            for style in ("hook", "cta", "item", "caption", "sub"):
+                sprite, width = reels_post.text_line(fonts, tpl, style, "Hot {spring} ♨️", 60,
+                                                     "#FF8A5B", "#1A0E08")
+                self.assertEqual(sprite.mode, "RGBA", f"{tpl.name}/{style}")
+                self.assertGreater(width, 50)
+            for kind in ({"type": "location", "text": "Hakone, Japan"}, {"type": "tag", "text": "MUST TRY 🔥"},
+                         {"type": "time", "text": "7:30 AM"}, {"type": "sound"}):
+                sprite, _ = reels_post.sticker_sprite(fonts, tpl, kind, "#FF8A5B", "#1A0E08")
+                self.assertGreater(sprite.width, 60, f"{tpl.name}/{kind['type']}")
+
+
 if __name__ == "__main__":
     unittest.main()

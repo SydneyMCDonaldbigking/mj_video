@@ -92,6 +92,9 @@ python scripts/reels_make.py japan-hakone-01 --post-only # 只改了文案、位
   服务器关机时退出码为 2。
 - 四种格式：`mood`（氛围）、`list`（编号清单）、`itinerary`（带时间贴纸的行程）、`asmr`（几乎无字，靠环境声）。
   每种格式的镜头时长写在 `reels_post.py` 的 `FORMATS` 里。
+- 7 套视觉模板：classic / boxed / editorial / bold / neon / scrapbook / retro，每套的字体、文字处理、贴纸外观、
+  入场动画、转场和调色都不同。分镜板不写 `template` 时均衡随机抽一套并写回板子（neon 只给夜景），
+  `python scripts/reels_post.py --gallery reels/boards/<id>.json` 可以出 7 套的对比图。
 - 文字支持彩色 emoji（Windows 的 Segoe UI Emoji）。贴纸有地点、标签、时间、浮动 emoji、手绘箭头、sound on。
 - 文字位置在关键帧审核时定（总览图上画了 T/U/M/L 四条线）。自动建议只用来兜底，大块主体常判错。
 - 不配旁白，保留 H3 原环境声，响度归一到 -18 LUFS；音乐在 Instagram 里用平台曲库加。
